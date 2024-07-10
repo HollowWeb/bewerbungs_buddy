@@ -18,6 +18,7 @@ class NavBar extends React.Component {
                     <li><Link to={""}>EXPORT DATA</Link></li>
                     <li><Link to={""}>CALENDAR</Link></li>
                 </ul>
+                
                 <a href="https://ch.indeed.com/">{Logo_Indeed}</a>
                 <a href="https://www.linkedin.com/">{Logo_LinkedIn}</a>
             </nav>

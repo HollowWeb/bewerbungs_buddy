@@ -1,5 +1,4 @@
 import '../Styles/App.css';
-
 import { Link } from 'react-router-dom';
 import Logo_Indeed from '../images_logos/indeed_logo.svg'
 import Logo_LinkedIn from '../images_logos/linkedIn.svg'
@@ -18,8 +17,8 @@ function App() {
                     <li><Link to={""}>EXPORT DATA</Link></li>
                     <li><Link to={""}>CALENDAR</Link></li>
                 </ul>
-                <a href="https://ch.indeed.com/">{Logo_Indeed}</a>
-                <a href="https://www.linkedin.com/">{Logo_LinkedIn}</a>
+                <a href="https://ch.indeed.com/" target='_blank' rel='noreferrer'><img src={Logo_Indeed} alt=''/></a>
+                <a href="https://www.linkedin.com/" target='_blank' rel='noreferrer'><img src={Logo_LinkedIn} alt=''/></a>
             </nav>
       </div>
     </div>
