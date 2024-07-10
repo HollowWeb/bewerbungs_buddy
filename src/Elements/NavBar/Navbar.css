@@ -1,0 +1,54 @@
+/* General Styles for the Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #38374494; /* Dark background color */
+    padding: 20px 25px; /* Adjust padding as needed */
+}
+
+nav a {
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    gap: 35px; /* Space between links */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav img {
+    height: 26px; /* Adjust the logo size as needed */
+}
+
+/* Specific Styles for Different Sections */
+nav .home-link {
+    margin-right: auto; /* Pushes the HOME link to the far left */
+}
+
+nav .logos {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between the Indeed and LinkedIn logos */
+}
+
+/* Center the ul */
+nav .center-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Add additional hover effects if needed */
+nav a:hover {
+    color: #ccc; /* Change the color on hover */
+}

@@ -1,25 +1,38 @@
-import '../Styles/App.css';
-import { Link } from 'react-router-dom';
-import Logo_Indeed from '../images_logos/indeed_logo.svg'
-import Logo_LinkedIn from '../images_logos/linkedIn.svg'
+import './App.css';
+import { 
+  Routes,
+  Route,
+  Outlet
+} from 'react-router-dom';
+
+import NavBar from './NavBar/NavBar';
+import Home from './Home/Home';
+import NewApplication from './Add_Application/NewApplication';
 
 function App() {
+  return (
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path='new_application' element={<NewApplication />} />
+        {/*
+        <Route path='applications' element={<Applications />} />
+        <Route path='export' element={<Export />} />
+        <Route path='calendar' element={<Calendar />} />
+        <Route path='edit_application' element={<EditApplication />} />
+        <Route path='*' element={<NotFound />} />
+        */}
+      </Route>
+    </Routes>
+  );
+}
 
+function Layout() {
   return (
     <div className="App">
-      
-      <div>
-            <nav>
-                <Link>HOME</Link>
-                <ul>
-                    <li><Link to={""}>NEW APPLICATION</Link></li>
-                    <li><Link to={""}>MY APPLICATIONS</Link></li>
-                    <li><Link to={""}>EXPORT DATA</Link></li>
-                    <li><Link to={""}>CALENDAR</Link></li>
-                </ul>
-                <a href="https://ch.indeed.com/" target='_blank' rel='noreferrer'><img src={Logo_Indeed} alt=''/></a>
-                <a href="https://www.linkedin.com/" target='_blank' rel='noreferrer'><img src={Logo_LinkedIn} alt=''/></a>
-            </nav>
+      <NavBar />
+      <div className='content'>
+        <Outlet />
       </div>
     </div>
   );
