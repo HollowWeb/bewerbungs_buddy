@@ -1,13 +1,12 @@
 import './App.css';
-import { 
-  Routes,
-  Route,
-  Outlet
-} from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 
 import NavBar from './NavBar/NavBar';
 import Home from './Home/Home';
 import NewApplication from './Add_Application/NewApplication';
+import ApplicationsTable from './ApplicationsTable/ApplicationsTable';
+import ApplicationDetails from './ApplicationDetails/ApplicationDetails';
+import Footer from './Footer/Footer';
 
 function App() {
   return (
@@ -15,11 +14,11 @@ function App() {
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
         <Route path='new_application' element={<NewApplication />} />
+        <Route path='applications' element={<ApplicationsTable />} />
+        <Route path='edit_application/:id' element={<ApplicationDetails />} />
         {/*
-        <Route path='applications' element={<Applications />} />
         <Route path='export' element={<Export />} />
         <Route path='calendar' element={<Calendar />} />
-        <Route path='edit_application' element={<EditApplication />} />
         <Route path='*' element={<NotFound />} />
         */}
       </Route>
@@ -34,6 +33,7 @@ function Layout() {
       <div className='content'>
         <Outlet />
       </div>
+      <Footer /> {/* Include the Footer component here */}
     </div>
   );
 }

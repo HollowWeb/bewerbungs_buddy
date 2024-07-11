@@ -1,0 +1,118 @@
+/* src/components/ApplicationDetails/ApplicationDetails.css */
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: #09001a;
+    color: white;
+    margin-top: 100px;
+}
+h1{
+    color: white;
+    font-size: 100px;
+}
+textarea {
+    resize: none;
+}
+
+.details-form {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d8d8d8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    color: #333;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    text-align: left;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-row.horizontal {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-row.horizontal > * {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-row.horizontal > *:last-child {
+    margin-right: 0;
+}
+
+.form-row label {
+    margin-bottom: 5px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    flex: 1;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.save-button {
+    background-color: #007bff;
+    color: white;
+}
+
+button.close-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875em;
+    margin-top: -10px;
+}
+
+.status-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: solid;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.status_class{
+    align-self: center;
+}

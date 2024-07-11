@@ -81,7 +81,7 @@ class NewApplication extends React.Component {
             postalCode,
             additionalNotes,
             notificationTime: notificationInt,
-            status: "Open" // You might want to change this to a dynamic value if needed
+            status: "Open"
         };
 
         try {
@@ -94,19 +94,19 @@ class NewApplication extends React.Component {
             });
 
             if (response.ok) {
-                // Handle successful response
+                
                 console.log('Application submitted successfully');
-                // Optionally clear the form or update the state as needed
+                
                 this.setState({ showSuccessMessage: true }, () => {
                     setTimeout(() => this.setState({ showSuccessMessage: false }), 5000);
                 });
                 this.setState({ companyName: '', contactInfo: '', phoneNumber: '', sendDate: new Date().toISOString().slice(0, 10), canton: '', postalCode: '', additionalNotes: '', notification: -1, errors: {} })
             } else {
-                // Handle error response
+                
                 console.error('Error submitting application', response.statusText);
             }
         } catch (error) {
-            // Handle network errors
+            
             console.error('Network error', error);
         }
     };
@@ -237,8 +237,8 @@ class NewApplication extends React.Component {
                                 <option value="15">15 Tage</option>
                             </select>
                             <div className="form-buttons">
-                                <button type="submit" className="add-button">Add</button>
                                 <button type="button" className="clear-button" onClick={() => this.setState({ companyName: '', contactInfo: '', phoneNumber: '', sendDate: new Date().toISOString().slice(0, 10), canton: '', postalCode: '', additionalNotes: '', notification: -1, errors: {}, showSuccessMessage: false })}>Clear</button>
+                                <button type="submit" className="add-button">Add</button>
                             </div>
                         </div>
                     </div>
@@ -247,7 +247,6 @@ class NewApplication extends React.Component {
             </div>
         );
     }
-
 }
 
 export default NewApplication;
