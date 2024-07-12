@@ -7,6 +7,9 @@ import NewApplication from './Add_Application/NewApplication';
 import ApplicationsTable from './ApplicationsTable/ApplicationsTable';
 import ApplicationDetails from './ApplicationDetails/ApplicationDetails';
 import Footer from './Footer/Footer';
+import Export from './Export/Export';
+import ErrorPage from './Error_page/Error';
+import Calendar from './Calendar/Calendar';
 
 function App() {
   return (
@@ -16,11 +19,9 @@ function App() {
         <Route path='new_application' element={<NewApplication />} />
         <Route path='applications' element={<ApplicationsTable />} />
         <Route path='edit_application/:id' element={<ApplicationDetails />} />
-        {/*
         <Route path='export' element={<Export />} />
         <Route path='calendar' element={<Calendar />} />
-        <Route path='*' element={<NotFound />} />
-        */}
+        <Route path='*' element={<ErrorPage />} />
       </Route>
     </Routes>
   );

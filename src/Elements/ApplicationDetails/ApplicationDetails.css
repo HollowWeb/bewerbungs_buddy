@@ -112,6 +112,7 @@ button.close-button {
     cursor: pointer;
     margin-top: 10px;
     align-self: center;
+    padding: 0;
 }
 
 .status_class{

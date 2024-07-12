@@ -163,3 +163,20 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.future-implementation, .error-page {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  color: white;
+}
+
+.future-implementation h2, .error-page h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.future-implementation p, .error-page p {
+  font-size: 1.2em;
+}

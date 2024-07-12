@@ -4,9 +4,7 @@ import Logo_Indeed from '../../images_logos/indeed_logo.svg'
 import Logo_LinkedIn from '../../images_logos/linkedIn.svg'
 import './Navbar.css'
 class NavBar extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    
     render() {
         return (
             <div>
