@@ -91,11 +91,13 @@ textarea {
 button.save-button {
     background-color: #007bff;
     color: white;
+    font-weight: bold;
 }
 
 button.close-button {
     background-color: #6c757d;
     color: white;
+    font-weight: bold;
 }
 
 .error-message {
@@ -115,6 +117,43 @@ button.close-button {
     padding: 0;
 }
 
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.popup h2 {
+    margin-bottom: 20px;
+}
+
+.confirm-button, .cancel-button {
+    margin: 5px;
+}
+
+
 .status_class{
     align-self: center;
+}
+
+#yesno{
+    color: #09001a;
+}
+
+.delete-button{
+    background-color: red;
+    font-weight: bold;
 }

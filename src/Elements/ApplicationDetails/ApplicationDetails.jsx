@@ -8,6 +8,7 @@ const ApplicationDetails = () => {
     const [application, setApplication] = useState(null);
     const [isDirty, setIsDirty] = useState(false);
     const [errors, setErrors] = useState({});
+    const [showDeletePopup, setShowDeletePopup] = useState(false);
 
     useEffect(() => {
         fetch(`http://localhost:8080/applications/${id}`)
@@ -96,6 +97,29 @@ const ApplicationDetails = () => {
         } else {
             navigate('/applications');
         }
+    };
+
+    const handleDelete = () => {
+        fetch(`http://localhost:8080/notifications/del/${id}`, {
+            method: 'DELETE',
+        })
+            .then(response => {
+                if (response.ok) {
+                    return fetch(`http://localhost:8080/applications/${id}`, {
+                        method: 'DELETE',
+                    });
+                } else {
+                    throw new Error('Failed to delete application');
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    navigate('/applications');
+                } else {
+                    throw new Error('Failed to delete notifications');
+                }
+            })
+            .catch(error => console.error('Error:', error));
     };
 
     const renderStatusCircle = (color, status) => (
@@ -217,10 +241,21 @@ const ApplicationDetails = () => {
                         <div className="form-buttons">
                             <button className="close-button" onClick={handleClose}>CLOSE</button>
                             <button className="save-button" onClick={handleSave}>SAVE</button>
+                            <button className="delete-button" onClick={() => setShowDeletePopup(true)}>DELETE</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {showDeletePopup && (
+                <div className="popup-overlay">
+                    <div className="popup">
+                        <h2 id="yesno">Are you sure you want to delete this application?</h2>
+                        <button className="confirm-button" onClick={handleDelete}>Yes, delete</button>
+                        <button className="cancel-button" onClick={() => setShowDeletePopup(false)}>No, cancel</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

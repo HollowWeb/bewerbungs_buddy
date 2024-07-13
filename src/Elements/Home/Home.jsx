@@ -35,7 +35,7 @@ class Home extends React.Component {
             const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
 
             notifications.forEach(notification => {
-                console.log('Processing notification:', notification);
+                
 
                 if (notification.sendDate === today) {
                     if (!notification.application) {
