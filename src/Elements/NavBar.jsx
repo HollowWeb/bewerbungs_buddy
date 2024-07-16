@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo_Indeed from '../../images_logos/indeed_logo.svg'
-import Logo_LinkedIn from '../../images_logos/linkedIn.svg'
-import './Navbar.css'
+import Logo_Indeed from '../images_logos/indeed_logo.svg'
+import Logo_LinkedIn from '../images_logos/linkedIn.svg'
+import '../Element_Styles/Navbar.css'
 class NavBar extends React.Component {
     
     render() {

@@ -1,5 +1,5 @@
 import React from "react"
-import "./NewApplication.css"
+import "../Element_Styles/NewApplication.css"
 
 class NewApplication extends React.Component {
     constructor(props) {
@@ -120,7 +120,7 @@ class NewApplication extends React.Component {
 
                 <form id="job-application-form" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="companyName">Firma Name:</label>
+                        <label htmlFor="companyName">Firma Name*:</label>
                         <input
                             type="text"
                             name="companyName"
@@ -131,7 +131,7 @@ class NewApplication extends React.Component {
                         {errors.companyName && <div className="error">{errors.companyName}</div>}
                     </div>
                     <div className="form-group">
-                        <label htmlFor="contactInfo">Mail oder Website:</label>
+                        <label htmlFor="contactInfo">Mail oder Website*:</label>
                         <input
                             type="text"
                             name="contactInfo"
@@ -153,7 +153,7 @@ class NewApplication extends React.Component {
                     </div>
                     <div className="flex-container">
                         <div className="form-group">
-                            <label htmlFor="sendDate">Datum:</label>
+                            <label htmlFor="sendDate">Datum*:</label>
                             <input
                                 type="date"
                                 name="sendDate"
@@ -163,7 +163,7 @@ class NewApplication extends React.Component {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="canton">Kanton:</label>
+                            <label htmlFor="canton">Kanton*:</label>
                             <select
                                 name="canton"
                                 id="canton"
@@ -201,7 +201,7 @@ class NewApplication extends React.Component {
                             {errors.canton && <div className="error">{errors.canton}</div>}
                         </div>
                         <div className="form-group">
-                            <label htmlFor="postalCode">Postleitzahl:</label>
+                            <label htmlFor="postalCode">Postleitzahl*:</label>
                             <input
                                 type="text"
                                 name="postalCode"

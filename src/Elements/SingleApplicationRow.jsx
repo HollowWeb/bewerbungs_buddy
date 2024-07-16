@@ -1,12 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import './SingleApplicationRow.css'; // Ensure you create this CSS file for styling
+import '../Element_Styles/SingleApplicationRow.css'; 
 
 const SingleApplicationRow = (props) => {
     const navigate = useNavigate();
     const { application } = props;
     const [isModalOpen, setIsModalOpen] = React.useState(false);
     const [status, setStatus] = React.useState(application.status);
+    
 
     const handleStatusClick = () => {
         setIsModalOpen(true);
@@ -15,7 +16,7 @@ const SingleApplicationRow = (props) => {
     const handleModalClose = () => {
         setIsModalOpen(false);
     };
-
+    
     const handleStatusChange = (newStatus) => {
         const updatedApplication = { ...application, status: newStatus };
 

@@ -1,15 +1,15 @@
-import './App.css';
+import '../Element_Styles/App.css';
 import { Routes, Route, Outlet } from 'react-router-dom';
 
-import NavBar from './NavBar/NavBar';
-import Home from './Home/Home';
-import NewApplication from './Add_Application/NewApplication';
-import ApplicationsTable from './ApplicationsTable/ApplicationsTable';
-import ApplicationDetails from './ApplicationDetails/ApplicationDetails';
-import Footer from './Footer/Footer';
-import Export from './Export/Export';
-import ErrorPage from './Error_page/Error';
-import Calendar from './Calendar/Calendar';
+import NavBar from './NavBar';
+import Home from './Home';
+import NewApplication from './NewApplication';
+import ApplicationsTable from './ApplicationsTable';
+import ApplicationDetails from './ApplicationDetails';
+import Footer from './Footer';
+import Export from './Export';
+import ErrorPage from './Error';
+import Calendar from './Calendar';
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function Layout() {
       <div className='content'>
         <Outlet />
       </div>
-      <Footer /> {/* Include the Footer component here */}
+      <Footer />
     </div>
   );
 }

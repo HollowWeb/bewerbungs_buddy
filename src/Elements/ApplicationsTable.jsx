@@ -1,6 +1,6 @@
 import React from "react";
-import SingleApplicationRow from "../SingleApplicationRow/SingleApplicationRow";
-import './ApplicationsTable.css';
+import SingleApplicationRow from "./SingleApplicationRow.jsx";
+import '../Element_Styles/ApplicationsTable.css';
 
 class ApplicationsTable extends React.Component {
     constructor(props) {

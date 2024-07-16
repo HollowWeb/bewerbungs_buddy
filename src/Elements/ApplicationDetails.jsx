@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import './ApplicationDetails.css';
+import '../Element_Styles/ApplicationDetails.css';
 
 const ApplicationDetails = () => {
     const { id } = useParams();
@@ -60,11 +60,6 @@ const ApplicationDetails = () => {
         setApplication((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleStatusChange = (newStatus) => {
-        setIsDirty(true);
-        setApplication((prev) => ({ ...prev, status: newStatus }));
-    };
-
     const handleSave = () => {
         const validationErrors = checkFormData();
         if (Object.keys(validationErrors).length > 0) {
@@ -122,13 +117,6 @@ const ApplicationDetails = () => {
             .catch(error => console.error('Error:', error));
     };
 
-    const renderStatusCircle = (color, status) => (
-        <button
-            className="status-circle"
-            style={{ backgroundColor: color }}
-            onClick={() => handleStatusChange(status)}
-        />
-    );
 
     const renderStatus = () => {
         let color;
@@ -154,7 +142,7 @@ const ApplicationDetails = () => {
                 <button
                     className="status-circle"
                     style={{ backgroundColor: color }}
-                    onClick={() => handleStatusChange(status)}
+                    
                 />
             </div>
         );
@@ -186,7 +174,7 @@ const ApplicationDetails = () => {
                             <div className="input-group">
                                 <label>Kanton</label>
                                 <select name="kanton" value={application.kanton} onChange={handleChange}>
-                                    <option value="">Choose...</option>
+                                    <option value={application.kanton}>{application.kanton}</option>
                                     <option value="Aargau AG">Aargau</option>
                                     <option value="Appenzell Ausserrhoden AR">Appenzell Ausserrhoden</option>
                                     <option value="Appenzell Innerrhoden AI">Appenzell Innerrhoden</option>
@@ -235,7 +223,7 @@ const ApplicationDetails = () => {
                             {errors.notes && <span className="error-message">{errors.notes}</span>}
                         </div>
                         <div className="form-row" style={{ flex: 1 }}>
-                            <label>TERMINE / MEATINGS / VORSTELLUNGSGESPRÄCH</label>
+                            <label>TERMINE / MEATINGS / VORSTELLUNGSGESPRÄCH will get added in the next version</label>
                             <textarea placeholder="Placeholder for meetings" readOnly></textarea>
                         </div>
                         <div className="form-buttons">

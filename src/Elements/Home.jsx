@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import '../Element_Styles/Home.css';
 import quotesJson from './quotes.json';
 import Modal from 'react-modal';
 

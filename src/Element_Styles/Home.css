@@ -1,7 +1,7 @@
-h2 {
+h2, h4, p {
     color: #ffffff;
 }
-/* Modal Styles for Dark Theme */
+
 .ReactModal__Overlay {
     position: fixed;
     top: 0;
