@@ -1,5 +1,5 @@
 import { fireEvent, render, screen, cleanup } from '@testing-library/react';
-import ApplicationsTable from '../Elements/ApplicationsTable/ApplicationsTable';
+import ApplicationsTable from '../Elements/ApplicationsTable';
 import { MemoryRouter } from 'react-router-dom';
 import { act } from 'react';
 
